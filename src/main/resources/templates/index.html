@@ -1,0 +1,55 @@
+ 
+<html > 
+<head> 
+	
+</head>
+<body> 
+ 
+ 
+  <h2>User Form</h2> 
+ 
+  <form th:object="${obj}" th:action="@{/user}" 
+method="post"> 
+   <table> 
+    <tr> 
+     <td>Name :</td> 
+     <td><input type="text" th:field="*{name}" /> 
+</td> 
+<td> 
+      <p th:if="${#fields.hasErrors('name')}" 
+th:errorclass="error" th:errors="*{name}" /> 
+     </td>
+	 
+    </tr> 
+    <tr> 
+     <td>Email :</td> 
+     <td><input type="email" th:field="*{email}" /> 
+</td> 
+<td> 
+      <p th:if="${#fields.hasErrors('email')}" 
+th:errorclass="error" th:errors="*{email}" /> 
+     </td> 
+	 
+    </tr> 
+    <tr> 
+     <td>Phno :</td> 
+     <td><input type="number" th:field="*{mobile}" /> 
+</td> 
+<td> 
+      <p th:if="${#fields.hasErrors('mobile')}" 
+th:errorclass="error" th:errors="*{mobile}" /> 
+     </td>
+	 
+    </tr> 
+    <tr> 
+     <td></td> 
+     <td><input type="submit" value="Submit"
+		 /> </td> 
+		    </tr> 
+			</table> 
+			</form> 
+			
+			
+			</body> 
+			</html>
+				
